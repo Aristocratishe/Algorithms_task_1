@@ -13,7 +13,7 @@ class MatrixGraph :  public IGraph {
 private:
     std::vector<std::vector<bool>> adjacencyMatrix;
 public:
-    explicit MatrixGraph(size_t size);
+    explicit MatrixGraph(int size);
     explicit MatrixGraph(const IGraph &graph);
     ~MatrixGraph() override = default;
     void AddEdge(int from, int to) override;

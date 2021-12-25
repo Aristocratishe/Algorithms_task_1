@@ -4,7 +4,7 @@
 
 #include "SetGraph.h"
 
-SetGraph::SetGraph(size_t size)
+SetGraph::SetGraph(int size)
         : adjacencyLists(size)
 {
 }
@@ -47,7 +47,7 @@ std::vector<int> SetGraph::GetPrevVertices(int vertex) const
 {
     assert(0 <= vertex && vertex < adjacencyLists.size());
     std::vector<int> prev_vertices;
-    for (size_t i = 0; i < adjacencyLists.size(); ++i)
+    for (auto i = 0; i < adjacencyLists.size(); ++i)
     {
         if (adjacencyLists[i].count(vertex))
             prev_vertices.push_back(i);

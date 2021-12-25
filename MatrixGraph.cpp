@@ -4,7 +4,7 @@
 
 #include "MatrixGraph.h"
 
-MatrixGraph::MatrixGraph(size_t size)
+MatrixGraph::MatrixGraph(int size)
 {
     adjacencyMatrix.resize(size, std::vector<bool>(size, false));
 }
@@ -17,7 +17,7 @@ MatrixGraph::MatrixGraph(const IGraph &graph)
     {
         vertice = graph.GetNextVertices(i);
         for (auto &vert : vertice) {
-            adjacencyMatrix[i][vert] = 1;
+            adjacencyMatrix[i][vert] = true;
         }
     }
 }

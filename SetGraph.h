@@ -14,8 +14,8 @@ class SetGraph : public IGraph {
 private:
     std::vector<std::set<int>> adjacencyLists;
 public:
-    SetGraph(size_t size);
-    SetGraph(const IGraph &graph);
+    explicit SetGraph(int size);
+    explicit SetGraph(const IGraph &graph);
     ~SetGraph() override = default;
     void AddEdge(int from, int to) override;
     int VerticesCount() const override;
